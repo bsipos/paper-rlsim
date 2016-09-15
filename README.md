@@ -24,7 +24,7 @@ The analyses implemented in the pipelines have the following goals:
 The pipeline tracks the [rlsim](http://bit.ly/rlsim-git) and [simNGS](http://bit.ly/simngs-git) packages as submodules; hence it is practical to use the `--recursive` flag when cloning the GitHub repository:
 
 ```
-git clone --recursive https://github.com/sbotond/paper-rlsim.git
+git clone --recursive https://github.com/bsipos/paper-rlsim.git
 ```
 
 ### Downloading the estimated expression levels
