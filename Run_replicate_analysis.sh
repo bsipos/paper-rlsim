@@ -4,11 +4,11 @@
 CORES=2
 Q=research-rh6
 MEMORY=10000
-LAUNCH="bsub -q $Q -M $MEMORY -n $CORES -R rusage[mem=$MEMORY],span[ptile=$CORES]"
+LAUNCH=" "
 LOGDIR=runlogs
 
 function run {
-    $LAUNCH "make -f data.mk/replicate/$1.mk $2 &> $LOGDIR/$1.log"
+    make -f data.mk/replicate/$1.mk $2 &> $LOGDIR/$1.log
 }
 
 run hs_Dudoit_S3_S5_1 replicate_analysis

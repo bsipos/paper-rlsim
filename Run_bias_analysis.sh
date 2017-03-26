@@ -3,11 +3,11 @@
 # LSF parameters:
 CORES=4
 MEMORY=20000
-LAUNCH="bsub -M $MEMORY -n $CORES -R rusage[mem=$MEMORY],span[ptile=$CORES]"
+LAUNCH=""
 LOGDIR=runlogs
 
 function run {
-    $LAUNCH "make -f data.mk/bias/$1.mk $2 &> $LOGDIR/$1.log"
+    make -f data.mk/bias/$1.mk $2 &> $LOGDIR/$1.log
 }
 
 # run dm_SRR015074 bias_analysis
